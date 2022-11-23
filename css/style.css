@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Russo+One&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* margin: 20px 0; */
+  /* background: #6589f9; */
+  background-image: url("http://twistedsifter.com/wp-content/uploads/2013/05/animated-gifs-of-fighting-game-backgrounds-18.gif");
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+}
+/* .nav {
+  border: 1px solid wheat;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+  height: 80px;
+  font-size: 25px;
+} */
+marquee {
+  /* border: 1px solid wheat; */
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-family: serif;
+  padding-top: 2px;
+}
+.game_name {
+  text-align: center;
+  font-family: "Press Start 2P", cursive;
+  font-size: 50px;
+  color: rgb(245, 120, 0);
+  margin-top: 40px;
+}
+.grid {
+  margin-top: 40px !important;
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  position: relative;
+  transition: all 0.4s linear;
+  transform-style: preserve-3d;
+  margin: 5px;
+}
+
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front {
+  z-index: 2;
+  background: url("../img/Q1.png") no-repeat center center / contain;
+}
+
+.back {
+  transform: rotateY(180deg);
+  /* background-color: #6589f9; */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+
+.match .front {
+  /* background: #6589f9 !important; */
+  background: transparent;
+  background-color: transparent;
+}
